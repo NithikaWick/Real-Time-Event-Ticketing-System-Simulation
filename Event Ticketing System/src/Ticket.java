@@ -1,22 +1,25 @@
 import java.math.BigDecimal;
 
 public class Ticket {
+    private static int idCounter = 0; // Static counter for unique IDs
     private int ticketID;
-    private String eventName;
+    private String eventName;//The name of the event
 //    private String eventDate;
-//    private String eventTime;
-//    private String eventLocation;
-    private BigDecimal ticketPrice;
+    private BigDecimal ticketPrice;//The price of the ticket
 
 
 
     public Ticket(int ticketID, String eventName, BigDecimal ticketPrice) {
-        this.ticketID = ticketID;
+        this.ticketID = generateUniqueID();
         this.eventName = eventName;
         this.ticketPrice = ticketPrice;
 
 
     }
+    private synchronized int generateUniqueID() {
+        return idCounter++;
+    }
+
     public int getTicketID() {
         return ticketID;
     }

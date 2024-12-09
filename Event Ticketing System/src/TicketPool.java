@@ -21,8 +21,8 @@ public class TicketPool {
         ticketQueue.add(ticket);//add ticket to the queue
         notifyAll();//notify all waiting threads
         //print out the message to show the tread name and the ticket added to the pool
-        System.out.println(Thread.currentThread().getName() + " has added a ticket to he pool." + ticket);
-        System.out.println("Current pool size: " + ticketQueue.size());
+        System.out.println("Ticket added by - " + Thread.currentThread().getName()  + " to the pool." + " Current pool size: " + ticketQueue.size());
+
     }
 
     //Buy ticket method which uses by customers to buy tickets from the pool

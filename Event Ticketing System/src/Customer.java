@@ -12,9 +12,9 @@ public class Customer  implements Runnable{
     public void run() {
         for (int i = 0; i < quantity; i++) {
             Ticket ticket = ticketPool.buyTicket();//buy ticket from the pool
-            System.out.println("Ticket bought by "
-                    + Thread.currentThread().getName() + ". Ticket is "
-                    + ticket);//print out the message to show the thread name and the ticket bought
+//            System.out.println("Ticket bought by "
+//                    + Thread.currentThread().getName() + ". Ticket is "
+//                    + ticket);//print out the message to show the thread name and the ticket bought
 
             try {
                 Thread.sleep(customerRetrivelRate * 1000);
