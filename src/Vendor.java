@@ -1,4 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
 
 import java.math.BigDecimal;
 
@@ -27,7 +26,6 @@ public class Vendor implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < totalTickets; i++) {
-//            synchronized (Vendor.class) {
             if (totalTicketsReleased >= maxTotalTickets) {
                 break;
             }

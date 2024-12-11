@@ -1,0 +1,11 @@
+{
+"eventName": "aa",
+"maxTotalTickets": 50,
+"ticketPrice": 1000,
+"maximumCapacity": 10,
+"vendorCount": 5,
+"totalTicketsPerVendor": 10,
+"quantity": 1,
+"ticketReleaseRate": 3,
+"customerRetrievalRate": 2
+}

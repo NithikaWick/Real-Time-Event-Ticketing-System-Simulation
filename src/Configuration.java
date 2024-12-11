@@ -96,4 +96,17 @@ public class Configuration {
     public void setCustomerRetrievalRate(int customerRetrievalRate) {
         this.customerRetrievalRate = customerRetrievalRate;
     }
+
+    @Override
+    public String toString() {
+        return  "\n\u001B[1m• eventName =\u001B[0m'" + eventName + '\'' +
+                ", \n\u001B[1m• maxTotalTickets = \u001B[0m" + maxTotalTickets +
+                ", \n\u001B[1m• ticketPrice = \u001B[0m" + ticketPrice +
+                ", \n\u001B[1m• maximumCapacity = \u001B[0m" + maximumCapacity +
+                ", \n\u001B[1m• vendorCount = \u001B[0m" + vendorCount +
+                ", \n\u001B[1m• totalTicketsPerVendor = \u001B[0m" + totalTicketsPerVendor +
+                ", \n\u001B[1m• quantity = \u001B[0m" + quantity +
+                ", \n\u001B[1m• ticketReleaseRate = \u001B[0m" + ticketReleaseRate +
+                ", \n\u001B[1m• customerRetrievalRate = \u001B[0m" + customerRetrievalRate + '\n';
+    }
 }
