@@ -9,27 +9,38 @@ import org.springframework.stereotype.Service;
 import jakarta.annotation.PostConstruct;
 import java.math.BigDecimal;
 
+/**
+ * Service class for managing vendor operations.
+ */
 @Service
 public class Vendor {
 
     @Autowired
-    private ConfigurationService configurationService;
+    private ConfigurationService configurationService; // Service for managing configuration settings
 
     @Autowired
-    private TicketPool ticketPool;
+    private TicketPool ticketPool; // Pool of tickets available for release
 
-    private int totalTickets;
-    private int ticketReleaseRate;
-    private BigDecimal ticketPrice;
-    private String eventName;
-    private static int totalTicketsReleased = 0;
-    private static int maxTotalTickets;
+    // Fields
+    private int totalTickets; // Total number of tickets to be released by the vendor
+    private int ticketReleaseRate; // Rate at which tickets will be released (in seconds)
+    private BigDecimal ticketPrice; // Price of each ticket
+    private String eventName; // Name of the event
+    private static int totalTicketsReleased = 0; // Total number of tickets released so far
+    private static int maxTotalTickets; // Maximum number of tickets that can be released
 
-    // Default constructor
+    /**
+     * Default constructor.
+     * Fields will be initialized in the @PostConstruct method.
+     */
     public Vendor() {
         // Fields will be initialized in @PostConstruct
     }
 
+    /**
+     * Initializes the vendor after bean construction.
+     * Sets the fields based on the configuration.
+     */
     @PostConstruct
     public void init() {
         Configuration config = configurationService.getConfiguration();
@@ -49,10 +60,19 @@ public class Vendor {
         }
     }
 
+    /**
+     * Sets the maximum number of tickets that can be released.
+     *
+     * @param maxTotalTickets the maximum number of tickets
+     */
     public static synchronized void setMaxTotalTickets(int maxTotalTickets) {
         Vendor.maxTotalTickets = maxTotalTickets;
     }
 
+    /**
+     * Releases tickets asynchronously.
+     * Tickets are released at the specified rate until the total number of tickets is reached or the maximum is exceeded.
+     */
     @Async
     public void releaseTickets() {
         Configuration config = configurationService.getConfiguration();
@@ -83,6 +103,11 @@ public class Vendor {
         }
     }
 
+    /**
+     * Gets the total number of tickets released so far.
+     *
+     * @return the total number of tickets released
+     */
     public static synchronized int getTotalTicketsReleased() {
         return totalTicketsReleased;
     }

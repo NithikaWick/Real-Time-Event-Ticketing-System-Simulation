@@ -6,6 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="efe83519-8eea-4f1a-aa31-ffe7a4bf305b" name="Changes" comment="CLI Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-ticketing-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-ticketing-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-ticketing-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-ticketing-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-ticketing-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-ticketing-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime-ticketing-frontend/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-ticketing-frontend/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/RealTimeEventTicketingSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/RealTimeEventTicketingSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/controller/ConfigurationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/controller/ConfigurationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/controller/VendorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/controller/VendorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/model/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/model/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/model/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/ConfigurationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/ConfigurationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/PostConstruct.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/PostConstruct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/TicketPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/TicketPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/realtimeticketingsystem/src/main/java/com/example/realtimeticketingsystem/service/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConfigurationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigurationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicketPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicketPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vendor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +118,7 @@
       <workItem from="1733788478972" duration="52899000" />
       <workItem from="1733958350160" duration="6235000" />
       <workItem from="1733973126650" duration="26000" />
-      <workItem from="1733973186841" duration="2856000" />
+      <workItem from="1733973186841" duration="8118000" />
     </task>
     <task id="LOCAL-00001" summary="CLI Update">
       <option name="closed" value="true" />

@@ -1,9 +1,18 @@
 import java.io.*;
 import java.math.BigDecimal;
 
+/**
+ * The ConfigurationManager class provides methods to save and load
+ * configuration settings to and from a JSON file.
+ */
 public class ConfigurationManager {
     public static final String CONFIG_FILE = "config.json";
 
+    /**
+     * Saves the given configuration to a JSON file.
+     *
+     * @param config the Configuration object to be saved
+     */
     public static void saveConfiguration(Configuration config) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(CONFIG_FILE))) {
             writer.write("{\n");
@@ -22,6 +31,11 @@ public class ConfigurationManager {
         }
     }
 
+    /**
+     * Loads the configuration from a JSON file.
+     *
+     * @return the Configuration object loaded from the file, or null if an error occurs
+     */
     public static Configuration loadConfiguration() {
         try (BufferedReader reader = new BufferedReader(new FileReader(CONFIG_FILE))) {
             StringBuilder json = new StringBuilder();
@@ -37,6 +51,12 @@ public class ConfigurationManager {
         }
     }
 
+    /**
+     * Parses a JSON string to create a Configuration object.
+     *
+     * @param json the JSON string representing the configuration
+     * @return the Configuration object created from the JSON string
+     */
     private static Configuration parseJson(String json) {
         String[] fields = json.replace("{", "").replace("}", "").split(",");
         String eventName = null;
@@ -93,7 +113,5 @@ public class ConfigurationManager {
         }
 
         return new Configuration(eventName, maxTotalTickets, ticketPrice, maximumCapacity, vendorCount, totalTicketsPerVendor, quantity, ticketReleaseRate, customerRetrievalRate);
-
     }
-
 }

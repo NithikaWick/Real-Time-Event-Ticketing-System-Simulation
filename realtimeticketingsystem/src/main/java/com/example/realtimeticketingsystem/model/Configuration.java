@@ -2,6 +2,9 @@ package com.example.realtimeticketingsystem.model;
 
 import java.math.BigDecimal;
 
+/**
+ * Model class representing the configuration settings for an event.
+ */
 public class Configuration {
     private String eventName;
     private int maxTotalTickets;
@@ -13,11 +16,25 @@ public class Configuration {
     private int ticketReleaseRate;
     private int customerRetrievalRate;
 
-    // No-args constructor
+    /**
+     * No-args constructor.
+     */
     public Configuration() {
     }
 
-    // Parameterized constructor (optional)
+    /**
+     * Parameterized constructor.
+     *
+     * @param eventName the name of the event
+     * @param maxTotalTickets the maximum number of total tickets
+     * @param ticketPrice the price of a ticket
+     * @param maximumCapacity the maximum capacity of the event
+     * @param vendorCount the number of vendors
+     * @param totalTicketsPerVendor the total number of tickets per vendor
+     * @param quantity the quantity of tickets
+     * @param ticketReleaseRate the rate at which tickets are released
+     * @param customerRetrievalRate the rate at which customers retrieve tickets
+     */
     public Configuration(String eventName, int maxTotalTickets, BigDecimal ticketPrice, int maximumCapacity,
                          int vendorCount, int totalTicketsPerVendor, int quantity,
                          int ticketReleaseRate, int customerRetrievalRate) {
@@ -89,7 +106,6 @@ public class Configuration {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
 
     public int getTicketReleaseRate() {
         return ticketReleaseRate;

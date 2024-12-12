@@ -6,25 +6,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service class for managing customer operations.
+ */
 @Service
 public class Customer {
 
     @Autowired
-    private TicketPool ticketPool;
+    private TicketPool ticketPool; // Pool of tickets available for purchase
 
     @Autowired
-    private ConfigurationService configurationService;
+    private ConfigurationService configurationService; // Service for managing configuration settings
 
     // Fields
     private int customerRetrievalRate; // The rate at which the customer will buy tickets from the pool
     private int quantity; // Quantity of tickets that the customer will buy
 
-    // Constructor
+    /**
+     * Default no-args constructor.
+     */
     public Customer() {
         // Default constructor
     }
 
-    // Method to start purchasing tickets
+    /**
+     * Method to start purchasing tickets asynchronously.
+     */
     @Async
     public void purchaseTickets() {
         Configuration config = configurationService.getConfiguration();

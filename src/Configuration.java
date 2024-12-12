@@ -1,5 +1,8 @@
 import java.math.BigDecimal;
 
+/**
+ * Represents the configuration settings for an event.
+ */
 public class Configuration {
     private String eventName;
     private int maxTotalTickets;
@@ -11,7 +14,19 @@ public class Configuration {
     private int ticketReleaseRate;
     private int customerRetrievalRate;
 
-    // Constructor
+    /**
+     * Constructs a new Configuration with the specified parameters.
+     *
+     * @param eventName the name of the event
+     * @param maxTotalTickets the maximum total number of tickets
+     * @param ticketPrice the price of each ticket
+     * @param maximumCapacity the maximum capacity of the event
+     * @param vendorCount the number of vendors
+     * @param totalTicketsPerVendor the total number of tickets per vendor
+     * @param quantity the quantity of tickets
+     * @param ticketReleaseRate the rate at which tickets are released
+     * @param customerRetrievalRate the rate at which customers retrieve tickets
+     */
     public Configuration(String eventName, int maxTotalTickets, BigDecimal ticketPrice, int maximumCapacity, int vendorCount, int totalTicketsPerVendor, int quantity, int ticketReleaseRate, int customerRetrievalRate) {
         this.eventName = eventName;
         this.maxTotalTickets = maxTotalTickets;
@@ -25,6 +40,7 @@ public class Configuration {
     }
 
     // Getters and setters for all fields
+
     public String getEventName() {
         return eventName;
     }
@@ -97,6 +113,11 @@ public class Configuration {
         this.customerRetrievalRate = customerRetrievalRate;
     }
 
+    /**
+     * Returns a string representation of the Configuration object.
+     *
+     * @return a string representation of the Configuration object
+     */
     @Override
     public String toString() {
         return  "\n\u001B[1m• eventName =\u001B[0m'" + eventName + '\'' +

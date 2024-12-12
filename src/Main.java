@@ -1,6 +1,11 @@
 import java.math.BigDecimal;
 import java.util.Scanner;
 
+/**
+ * The Main class is the entry point of the application.
+ * It handles the configuration setup, creation of vendor and customer threads,
+ * and manages the ticket pool.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,11 +22,11 @@ public class Main {
                     System.out.println("No previous configuration found. Configuring the system again.");
                     config = configureSystem(scanner);
                 } else {
-                System.out.println("\n\u001b[1mLoaded configuration: \u001b[m\n" + config);
+                    System.out.println("\n\u001b[1mLoaded configuration: \u001b[m\n" + config);
                     System.out.println("Configuration loaded successfully.");
                     System.out.println();
-            }
-                break; //Break the loop after loading the configuration
+                }
+                break; // Break the loop after loading the configuration
             } else if ((choice.equals("c") || choice.equals("configure"))) {
                 config = configureSystem(scanner);
                 break;
@@ -71,15 +76,18 @@ public class Main {
         System.out.println("\nTotal number of tickets released: " + Vendor.getTotalTicketsReleased());
         scanner.close();
 
-
         // Save the configuration data
         ConfigurationManager.saveConfiguration(config);
         System.out.println("Configuration saved to " + ConfigurationManager.CONFIG_FILE);
         scanner.close();
     }
 
-
-
+    /**
+     * Configures the system by prompting the user for various configuration settings.
+     *
+     * @param scanner the Scanner object used to read user input
+     * @return a Configuration object with the specified settings
+     */
     private static Configuration configureSystem(Scanner scanner) {
         System.out.print("\nEnter the name of the event: ");
         String eventName = scanner.nextLine();
@@ -113,10 +121,15 @@ public class Main {
         scanner.nextLine(); // Consume newline
 
         return new Configuration(eventName, maxTotalTickets, ticketPrice, maximumCapacity, vendorCount, totalTicketsPerVendor, quantity, ticketReleaseRate, customerRetrievalRate);
-
     }
 
-
+    /**
+     * Prompts the user for a positive integer input.
+     *
+     * @param scanner the Scanner object used to read user input
+     * @param prompt the prompt message to display to the user
+     * @return a positive integer input from the user
+     */
     private static int getPositiveIntInput(Scanner scanner, String prompt) {
         int input;
         do {

@@ -4,23 +4,32 @@ import com.example.realtimeticketingsystem.model.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+import javax.annotation.PostConstruct;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * Service class for managing a pool of tickets.
+ */
 @Service
 public class TicketPool {
-    private final Queue<Ticket> ticketQueue = new LinkedList<>();
-    private int maximumCapacity;
+    private final Queue<Ticket> ticketQueue = new LinkedList<>(); // Queue to hold tickets
+    private int maximumCapacity; // Maximum capacity of the ticket pool
 
     @Autowired
-    private ConfigurationService configurationService;
+    private ConfigurationService configurationService; // Service for managing configuration settings
 
-    // Default constructor required for Spring
+    /**
+     * Default constructor required for Spring.
+     */
     public TicketPool() {
         // Initialization will be done in @PostConstruct method
     }
 
+    /**
+     * Initializes the ticket pool after bean construction.
+     * Sets the maximum capacity based on the configuration.
+     */
     @PostConstruct
     public void init() {
         // Initialize maximumCapacity after bean construction
@@ -32,7 +41,12 @@ public class TicketPool {
         }
     }
 
-    // Method used by vendors to add tickets to the pool
+    /**
+     * Adds a ticket to the pool.
+     * If the pool is full, the calling thread will wait until space is available.
+     *
+     * @param ticket the ticket to add
+     */
     public synchronized void addTicket(Ticket ticket) {
         while (ticketQueue.size() >= maximumCapacity) {
             try {
@@ -49,7 +63,12 @@ public class TicketPool {
         System.out.println("Ticket added by - " + Thread.currentThread().getName() + " to the pool. Current pool size: " + ticketQueue.size());
     }
 
-    // Method used by customers to buy tickets from the pool
+    /**
+     * Buys a ticket from the pool.
+     * If no tickets are available, the calling thread will wait until a ticket is added.
+     *
+     * @return the ticket bought from the pool, or null if interrupted
+     */
     public synchronized Ticket buyTicket() {
         while (ticketQueue.isEmpty()) {
             try {
