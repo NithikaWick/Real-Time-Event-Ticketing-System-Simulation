@@ -1,2 +1,14 @@
 # Real-Time-Event-Ticketing-System
-This is a Real-Time Event Ticketing System developed as my University project. It implements the Producer-Consumer pattern to handle concurrent ticket releases and purchases, ensuring data integrity and synchronization. The system features a user-friendly interface and robust backend to simulate a dynamic ticketing environment.
+## Description
+The Real-Time Event Ticketing System is a simulation project that demonstrates a ticketing system for events. It includes a Spring Boot backend and a React frontend, providing real-time updates using WebSockets.
+
+## Features
+Configuration Management: Set up and manage event configurations.  
+Vendor Control: Start vendors to release tickets.  
+Customer Control: Start customers to purchase tickets.  
+Real-Time Updates: Monitor system status with real-time updates.  
+
+## Technologies Used
+Backend: Spring Boot, WebSockets, Jackson  
+Frontend: React, Axios, Socket.io-client  
+Build Tools: Maven, npm  
