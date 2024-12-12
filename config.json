@@ -1,11 +1,1 @@
-{
-"eventName": "aa",
-"maxTotalTickets": 50,
-"ticketPrice": 1000,
-"maximumCapacity": 10,
-"vendorCount": 5,
-"totalTicketsPerVendor": 10,
-"quantity": 1,
-"ticketReleaseRate": 3,
-"customerRetrievalRate": 2
-}
+{"eventName":"Summer Fest 2024","maxTotalTickets":500,"ticketPrice":75.00,"maximumCapacity":1000,"vendorCount":5,"totalTicketsPerVendor":100,"quantity":5,"ticketReleaseRate":2,"customerRetrievalRate":1}
